@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="wizard_set_invoice_registered" model="ir.ui.view">
+        <field name="name">wizard_set_invoice_registered</field>
+        <field name="model">wizard.set.invoice.registered</field>
+        <field name="arch" type="xml">
+            <form string="Imposta come registrata" >
+                <sheet>
+                    <group>
+                        <div>
+                            Le fatture verrano segnate come registrate
+                        </div>
+                    </group>
+                </sheet>
+                <footer>
+                    <button special="cancel" string="Cancel"/>
+                    <button name="set_registered" string="Imposta" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window name="Imposta come registrata"
+        res_model="wizard.set.invoice.registered"
+        src_model="fatturapa.attachment.in"
+        view_mode="form"
+        target="new"
+        key2="client_action_multi"
+        id="action_wizard_set_invoice_registered"
+        view_id="wizard_set_invoice_registered"/>
+
+</odoo>

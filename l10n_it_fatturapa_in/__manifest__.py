@@ -3,6 +3,7 @@
 # Copyright 2018 Lorenzo Battistini
 # Copyright 2018 Sergio Zanchetta (Associazione PNLUG - Gruppo Odoo)
 # © 2022-2023 Andrei Levin - Didotech srl (www.didotech.com)
+# © 2025 Andrei Levin - Codebeex srl (www.codebeex.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 # noinspection PyStatementEffect
 {
@@ -20,11 +21,12 @@
         'base_vat_sanitized',
         'l10n_it_fatturapa',
         'l10n_it_withholding_tax_causali',
-        ],
+    ],
     "data": [
         'views/account_view.xml',
         'views/partner_view.xml',
         'wizard/wizard_import_fatturapa_view.xml',
+        'wizard/wizard_set_invoice_registered.xml',
         'wizard/link_to_existing_invoice.xml',
         'views/company_view.xml',
         'security/ir.model.access.csv',
