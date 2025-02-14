@@ -4,10 +4,10 @@
 # Copyright 2018 Sergio Zanchetta (Associazione PNLUG - Gruppo Odoo)
 # © 2022-2023 Andrei Levin - Didotech srl (www.didotech.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-
+# noinspection PyStatementEffect
 {
     'name': 'ITA - Fattura elettronica - Ricezione',
-    'version': '12.0.2.6.1_8',
+    'version': '12.0.2.6.1_9',
     "development_status": "Beta",
     'category': 'Localization/Italy',
     'summary': 'Ricezione fatture elettroniche',

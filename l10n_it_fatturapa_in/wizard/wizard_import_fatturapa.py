@@ -211,18 +211,21 @@ class WizardImportFatturapa(models.TransientModel):
             partners = search_partner(domain)
         commercial_partner_id = False
         if len(partners) > 1:
-            for partner in partners:
-                if (
-                    commercial_partner_id and
-                    partner.commercial_partner_id.id != commercial_partner_id
-                ):
-                    raise UserError(
-                        _("Two distinct partners with "
-                          "VAT number %s or Fiscal Code %s already "
-                          "present in db." %
-                          (vat, cf))
-                        )
-                commercial_partner_id = partner.commercial_partner_id.id
+            if all(partners.mapped('vat')) and all(partners.mapped('fiscalcode')) and not cf in partners.mapped('fiscalcode'):
+                partners = []
+            else:
+                for partner in partners:
+                    if (
+                        commercial_partner_id and
+                        partner.commercial_partner_id.id != commercial_partner_id
+                    ):
+                        raise UserError(
+                            _("Two distinct partners with "
+                              "VAT number %s or Fiscal Code %s already "
+                              "present in db." %
+                              (vat, cf))
+                            )
+                    commercial_partner_id = partner.commercial_partner_id.id
         if partners:
             if not commercial_partner_id:
                 commercial_partner_id = partners[0].commercial_partner_id.id
