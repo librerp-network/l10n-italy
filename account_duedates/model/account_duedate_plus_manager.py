@@ -222,8 +222,13 @@ class DueDateManager(models.Model):
 
         # If there are duedates check the amounts
         amounts_sum = sum(duedates_amounts)
-        einvoice_difference = self.invoice_id.efatt_rounding or 0
-        difference = round(amounts_sum - amount_total + einvoice_difference, precision)
+
+        # This does not seem to be the right way to calculate the difference
+        # because rounding is already included in amount_total
+        # einvoice_difference = self.invoice_id.efatt_rounding or 0
+        # difference = round(amounts_sum - amount_total + einvoice_difference, precision)
+
+        difference = round(amounts_sum - amount_total, precision)
 
         # There must be at least one due date to proceed with validation,
         # if no due date has been defined yet skip the validation
