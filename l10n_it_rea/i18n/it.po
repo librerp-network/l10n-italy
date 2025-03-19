@@ -2,24 +2,25 @@
 # This file contains the translation of the following modules:
 # * l10n_it_rea
 #
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo (12.0)\n"
+"Project-Id-Version: l10n-italy (10.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-05 19:03+0000\n"
-"PO-Revision-Date: 2022-06-05 19:03+0000\n"
-"Last-Translator: Antonio M. Vigliotti <antoniomaria.vigliotti@gmail.com>\n"
-"Language-Team: Zeroincombenze (https://www.zeroincombenze.it)\n"
-"Language: it_IT\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: 2017-05-12 02:39+0000\n"
+"PO-Revision-Date: 2023-04-26 16:05+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: Italian (http://www.transifex.com/oca/OCA-l10n-italy-10-0/"
+"language/it/)\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: l10n_it_rea
-#: code:addons/l10n_it_rea/models/res_company.py:54
-#: code:addons/l10n_it_rea/models/res_company.py:54
 #: code:addons/l10n_it_rea/models/res_company.py:54
 #, python-format
 msgid "%s - %s / Share Cap. %s € / %s / %s"
@@ -37,8 +38,6 @@ msgstr "Contatto"
 
 #. module: l10n_it_rea
 #: selection:res.partner,rea_liquidation_state:0
-#: selection:res.partner,rea_liquidation_state
-#: selection:res.partner,rea_liquidation_state
 msgid "In liquidation"
 msgstr "In liquidazione"
 
@@ -47,7 +46,7 @@ msgstr "In liquidazione"
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_partner__rea_liquidation_state
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_users__rea_liquidation_state
 msgid "Liquidation State"
-msgstr "Attiva/In liquidazione"
+msgstr "Stato liquidazione"
 
 #. module: l10n_it_rea
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_company__rea_member_type
@@ -58,36 +57,32 @@ msgstr "Tipo socio"
 
 #. module: l10n_it_rea
 #: selection:res.partner,rea_member_type:0
-#: selection:res.partner,rea_member_type
-#: selection:res.partner,rea_member_type
 msgid "Multiple Members"
 msgstr "Soci multipli"
 
 #. module: l10n_it_rea
 #: selection:res.partner,rea_liquidation_state:0
-#: selection:res.partner,rea_liquidation_state
-#: selection:res.partner,rea_liquidation_state
 msgid "Not in liquidation"
-msgstr "Operativa"
+msgstr "Non in liquidazione"
 
 #. module: l10n_it_rea
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_company__rea_office
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_partner__rea_office
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_users__rea_office
 msgid "Office Province"
-msgstr "Provincia Ufficio"
+msgstr "Provincia ufficio"
 
 #. module: l10n_it_rea
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_company__rea_code
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_partner__rea_code
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_users__rea_code
 msgid "REA Code"
-msgstr "Codice REA"
+msgstr "Numero REA"
 
 #. module: l10n_it_rea
 #: model_terms:ir.ui.view,arch_db:l10n_it_rea.view_company_form_rea
 msgid "REA Data"
-msgstr "REA Data"
+msgstr "Dati REA"
 
 #. module: l10n_it_rea
 #: model_terms:ir.ui.view,arch_db:l10n_it_rea.view_rea_partner_form
@@ -99,20 +94,25 @@ msgstr "Registrazione REA"
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_partner__rea_capital
 #: model:ir.model.fields,field_description:l10n_it_rea.field_res_users__rea_capital
 msgid "Share Capital"
-msgstr "Share Capital"
+msgstr "Capitale sociale"
 
 #. module: l10n_it_rea
-#: sql_constraint:res.partner:0
-#: sql_constraint:res.partner
-#: sql_constraint:res.partner
-msgid "The rea code code must be unique per company !"
-msgstr "Il codice REA è unico per ogni Azieda !"
+#: code:addons/l10n_it_rea/models/res_partner.py:34
+#, python-format
+msgid ""
+"The REA Code and Office Province must be unique per company.\n"
+"Please edit '{this_partner}' or '{other_partners}' and try again."
+msgstr ""
+"Il numero REA e la provincia ufficio devono essere univoche per azienda.\n"
+"Modificare '{this_partner}' o '{other_partners}' e riprovare."
 
 #. module: l10n_it_rea
 #: selection:res.partner,rea_member_type:0
-#: selection:res.partner,rea_member_type
-#: selection:res.partner,rea_member_type
 msgid "Unique Member"
 msgstr "Socio unico"
 
+#~ msgid "The rea code code must be unique per company !"
+#~ msgstr "Il codice REA deve essere univoco per azienda !"
 
+#~ msgid "Partner"
+#~ msgstr "Partner"
