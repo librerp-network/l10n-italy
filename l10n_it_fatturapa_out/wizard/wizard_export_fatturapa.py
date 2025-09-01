@@ -796,7 +796,7 @@ class WizardExportFatturapa(models.TransientModel):
                     ModalitaPagamento=(
                         invoice.payment_term_id.fatturapa_pm_id.code),
                     ImportoPagamento=ImportoPagamento,
-                    CodicePagamento=invoice.payment_term_id.note or invoice.payment_term_id.name
+                    CodicePagamento=invoice.payment_term_id.note.strip() or invoice.payment_term_id.name.strip()
                 )
 
                 # Add only the existing optional fields

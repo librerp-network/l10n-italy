@@ -3,10 +3,10 @@
 # Copyright 2018 Sergio Zanchetta (Associazione PNLUG - Gruppo Odoo)
 # Copyright 2018 Sergio Corato
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-
+# noinspection PyStatementEffect
 {
     'name': 'ITA - Fattura elettronica - Emissione',
-    'version': '12.0.2.2.5_11',
+    'version': '12.0.2.2.5_12',
     'development_status': 'Beta',
     'category': 'Localization/Italy',
     'summary': 'Emissione fatture elettroniche',
